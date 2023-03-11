@@ -1,0 +1,20 @@
+import React from 'react'; 
+import Main from './Main';
+import { Provider } from "react-redux";
+import store from "./store";
+
+
+class App extends React.Component {  
+ constructor() {  
+      super();  
+   }  
+   render() {  
+      return (  
+          <Provider store={store}>
+             <Main/>
+          </Provider>
+        
+      );  
+   }  
+}  
+export default App;  
