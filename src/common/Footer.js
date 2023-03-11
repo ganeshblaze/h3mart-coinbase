@@ -1,13 +1,10 @@
-import React, { Component } from 'react';  
+import React from 'react';  
 import '../common/footer.css';
 import facebook from '../images/icons8-facebook.svg';
 import twitter from '../images/icons8-twitter.svg';
 
 class Footer extends React.Component {  
- constructor() {  
-      super();  
-
-   }  
+ 
    render() {  
       return (  
          <div className='footer-container'> 

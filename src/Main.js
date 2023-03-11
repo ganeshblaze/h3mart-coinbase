@@ -6,7 +6,6 @@ import { requestApiData } from "./actions";
 import Navbar from "./common/NavBar";
 import Banner from "./common/Banner";
 import { Layout, Table } from 'antd';
-import { ColumnsType } from 'antd/es/table';
 import Footer from "./common/Footer";
 
 class Main extends React.Component {
@@ -36,7 +35,7 @@ class Main extends React.Component {
     })
   }
 
-  person = (coindata, i) =>
+  person = (coindata) =>
     <div key={coindata.id.value}>
       <h1>
         {coindata.rank}
@@ -52,7 +51,7 @@ class Main extends React.Component {
 
   render() {
     const { data = [] } = this.props.data;
-    const { view, clicked } = this.state;
+    const { clicked } = this.state;
     const trimmed = data.slice(0,50);
     
     const columns = [
@@ -71,7 +70,7 @@ class Main extends React.Component {
         align : 'left',
         width : "25%",
         render: (text, record) => (
-          <div className="icon-container"><img class="icon-images" src={`https://assets.coincap.io/assets/icons/${record.symbol.toLowerCase()}@2x.png`}/> {record.name} <br/> 
+          <div className="icon-container"><img class="icon-images" src={`https://assets.coincap.io/assets/icons/${record.symbol.toLowerCase()}@2x.png`} alt=""/> {record.name} <br/> 
           {record.symbol} <br/>
            </div>
         )

@@ -1,11 +1,7 @@
-import React, { Component } from 'react';  
+import React from 'react';  
 import '../common/banner.css';
 
 class Banner extends React.Component {  
- constructor() {  
-      super();  
-
-   }  
    render() {  
       return (  
          <div className='body-banner-container styling-banner'>  

@@ -5,9 +5,7 @@ import store from "./store";
 
 
 class App extends React.Component {  
- constructor() {  
-      super();  
-   }  
+ 
    render() {  
       return (  
           <Provider store={store}>
